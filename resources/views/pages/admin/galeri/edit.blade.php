@@ -19,11 +19,12 @@
         </div>
         @endif
 
-        <form method="post" action="{{route('galeri.store')}}" enctype="multipart/form-data">
+        <form method="post" action="{{route('galeri.update', $item->id)}}" enctype="multipart/form-data">
+            @method('PUT')
             @csrf
             <div class="form-group">
               <label for="image">Image</label>
-              <input type="file" class="form-control" id="image" placeholder="Enter Image">
+              <input type="file" class="form-control" id="image" name="image" placeholder="Enter Image">
             </div>
             <div class="form-group">
               <label for="text">Text</label>
@@ -31,7 +32,7 @@
             </div>
             <div class="form-group">
               <label for="inputAddress2">Link</label>
-              <input type="text" class="form-control" id="link" placeholder="Enter Link">
+              <input type="text" class="form-control" id="link" name="link" placeholder="Enter Link">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

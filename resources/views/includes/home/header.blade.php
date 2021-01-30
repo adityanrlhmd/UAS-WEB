@@ -9,19 +9,19 @@
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item active ml-2">
-                    <a class="nav-link" href="#"> JADWAL TV </a>
+                    <a class="nav-link" href="{{route('tv.index')}}"> JADWAL TV </a>
                 </li>
                 <li class="nav-item active ml-2">
                     <a class="nav-link" href="{{route('program.index')}}"> PROGRAM </a>
                 </li>
                 <li class="nav-item active ml-2">
-                    <a class="nav-link" href="#"> NEWS </a>
+                    <a class="nav-link" href="{{route('berita.index')}}"> NEWS </a>
                 </li>
                 <li class="nav-item active ml-2">
                     <a class="nav-link" href="{{route('ginstagram.index')}}"> GALERI </a>
                 </li>
                 <li class="nav-item active ml-2">
-                    <a class="nav-link" href="#"> KONTAK KAMI </a>
+                    <a class="nav-link page-scroll" href="#kontak" > KONTAK KAMI </a>
                 </li>
 
                 <li class="nav-item ml-2">
@@ -35,23 +35,29 @@
                         <img src="https://www.sctv.co.id//assets/images/material/icon_search.png" alt="">
                     </a>
                 </li>
-                <li>
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/') }}">Home</a>
-                    @else
-                    <div class="btn-group ml-2" role="group" aria-label="Basic mixed styles example">
-                        <a class="btn btn-primary" href="{{ route('login') }}">Login</i></a>
+                <li class="dropdown no-arrow ">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user" style="color: blue"></i>
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="userDropdown">
+                        @if (Route::has('login'))
+                            <div class="top-right links">
+                                @auth
+                                    <a href="{{ url('/home') }}" class="ml-5" style="text-decoration: none" >Admin</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="ml-4" style="text-decoration: none">Login</i></a>
 
-                        @if (Route::has('register'))
-                            <a class="btn btn-success" href="{{ route('register') }}">Register</i></a>
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}" style="text-decoration: none">Register</i></a>
+                                    @endif
+
+                                @endauth
+                            </div>
                         @endif
                     </div>
-
-                    @endauth
-                </div>
-            @endif
                 </li>
             </ul>
         </div>

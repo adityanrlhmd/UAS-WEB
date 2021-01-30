@@ -2,9 +2,14 @@
 @section('content')
 <div class="container-fluid">
     <div class="card bg-light" style="border: none">
-        <div class="button p-3">
-        <a class="btn btn-primary float-right" href="{{(route('jadwaltv.create'))}}">Create</a>
-    </div>
+        <div class="atas d-flex">
+            <div class="tittle my-auto pl-3">
+                <h3>Jadwal TV</h3>
+            </div>
+            <div class="button p-3 ml-auto">
+                <a class="btn btn-primary" href="{{(route('jadwaltv.create'))}}">Create</a>
+             </div>
+        </div>
 <table class="table table-striped">
     <thead class="text-white">
       <tr class="bg-success" >

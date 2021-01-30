@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     @include('includes.home.style')
-    <title>Tugas Framework CSS</title>
+    <title>Tugas UAS WEB</title>
 </head>
 
 <body>

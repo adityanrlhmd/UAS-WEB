@@ -19,11 +19,12 @@
         </div>
         @endif
 
-        <form method="post" action="{{route('rekomendasi.store')}}" enctype="multipart/form-data">
+        <form method="post" action="{{route('rekomendasi.update', $item->id)}}" enctype="multipart/form-data">
+            @method('PUT')
             @csrf
             <div class="form-group">
               <label for="image">Image</label>
-              <input type="file" class="form-control" id="image" placeholder="Enter Image">
+              <input type="file" class="form-control" name="image" id="image" placeholder="Enter Image">
             </div>
             <div class="form-group">
               <label for="text">Text</label>

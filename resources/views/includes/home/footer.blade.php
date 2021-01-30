@@ -1,5 +1,5 @@
 <footer>
-    <section class="peta">
+    <section class="peta" id="kontak">
         <div class="banner-peta">
             <div class="mapouter">
                 <div class="gmap_canvas">

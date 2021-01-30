@@ -10,3 +10,5 @@
     <link href="{{url('template/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
     <link rel="stylesheet" href="{{url('template/css/style.css')}}">
+
+    <link rel="icon" href="https://www.sctv.co.id//assets/images/material/favicon.png">

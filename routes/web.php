@@ -41,6 +41,8 @@ Route::prefix('/')
         Route::resource('/', 'HomepageController');
         Route::resource('/ginstagram', 'GinstagramController');
         Route::resource('/program', 'ProgramController');
+        Route::resource('/tv', 'TvController');
+        Route::resource('/berita', 'BeritaController');
     });
 
 Route::prefix('home')

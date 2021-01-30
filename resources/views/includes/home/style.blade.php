@@ -8,3 +8,9 @@
 <!-- Theme CSS -->
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/owl.theme.default.css">
+<style>
+    body{
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+</style>

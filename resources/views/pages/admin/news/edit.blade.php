@@ -19,19 +19,20 @@
         </div>
         @endif
 
-        <form method="post" action="{{route('news.store')}}" enctype="multipart/form-data">
+        <form method="post" action="{{route('news.update', $item->id)}}" enctype="multipart/form-data">
+            @method('PUT')
             @csrf
             <div class="form-group">
               <label for="image">Image</label>
-              <input type="file" class="form-control" id="image" placeholder="Enter Image">
+              <input type="file" class="form-control" name="image" id="image" placeholder="Enter Image">
             </div>
             <div class="form-group">
               <label for="text">Text</label>
-              <input type="text" class="form-control" id="text" name="text" placeholder="Enter text">
+              <input type="text" class="form-control" name="text" id="text" name="text" placeholder="Enter text">
             </div>
             <div class="form-group">
               <label for="inputAddress2">Link</label>
-              <input type="text" class="form-control" id="link" placeholder="Enter Link">
+              <input type="text" class="form-control" name="link" id="link" placeholder="Enter Link">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
